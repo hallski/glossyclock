@@ -10,7 +10,6 @@
 
 
 @interface ClockWindow : NSWindow {
-    BOOL isVisible;
 }
 
 @end
