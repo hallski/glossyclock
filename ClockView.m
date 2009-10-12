@@ -13,16 +13,7 @@
 
 @implementation ClockView
 
-- (id)initWithFrame:(NSRect)frame 
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        clockTimer = [[ClockTimer alloc] init];
-    }
-    return self;
-}
-
-- (void)setupBackgroundLayer 
+- (CALayer *)setupBackgroundLayer 
 {
     backgroundLayer = [CAGradientLayer layer];
     
@@ -33,17 +24,17 @@
     
     CFRelease(gradientColor1);
     CFRelease(gradientColor2);
-        
+    
     [(CAGradientLayer *)backgroundLayer setColors:colors];
     [backgroundLayer setCornerRadius:12.0f];
-
+    
     CAConstraintLayoutManager *layout = [CAConstraintLayoutManager layoutManager];
     [backgroundLayer setLayoutManager:layout];
-
-    [self setLayer:backgroundLayer];
+    
+    return backgroundLayer;
 }
 
-- (void)setupClockFaceLayer {
+- (CALayer *)setupClockFaceLayer {
     CATextLayer *clockFaceLayer = [CATextLayer layer];
     [clockFaceLayer bind:@"string" toObject:clockTimer withKeyPath:@"outputString" options:nil];
     [clockFaceLayer setFont:@"Menlo"];
@@ -60,17 +51,24 @@
                                             relativeTo:@"superlayer"
                                              attribute:kCAConstraintMidY];
     [clockFaceLayer addConstraint:constraint];
-  
-    [backgroundLayer addSublayer:clockFaceLayer];
+    
+    return clockFaceLayer;
 }
 
-- (void)setupLayers
+- (CALayer *)setupBorderLayer
 {
-    [self setupBackgroundLayer];
+    CALayer *borderLayer = [CALayer layer];
+    CGRect borderRect = CGRectInset([self frame], 8.0f, 8.0f);
+    [borderLayer setCornerRadius:12.0f];
+    [borderLayer setBorderColor:CGColorGetConstantColor(kCGColorWhite)];
+    [borderLayer setBorderWidth:2.0f];
+    [borderLayer setFrame:borderRect];
     
-    [self setupClockFaceLayer];
-    
-    // Draw a glossy reflection
+    return borderLayer;    
+}
+
+- (CALayer *)setupGlossLayer
+{
     CALayer *glossLayer = [CALayer layer];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"clock-gloss" ofType:@"png"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
@@ -86,22 +84,33 @@
     [glossLayer setMasksToBounds:YES];
     [glossLayer setFrame:[self frame]];
 
-    [backgroundLayer addSublayer:glossLayer];
+    return glossLayer;
+}
 
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderRect = CGRectInset([self frame], 8.0f, 8.0f);
-    [borderLayer setCornerRadius:12.0f];
-    [borderLayer setBorderColor:CGColorGetConstantColor(kCGColorWhite)];
-    [borderLayer setBorderWidth:2.0f];
-    [borderLayer setFrame:borderRect];
+- (CALayer *)setupLayers
+{
+    backgroundLayer = [self setupBackgroundLayer];
     
-    [backgroundLayer addSublayer:borderLayer];
+    [backgroundLayer addSublayer:[self setupClockFaceLayer]];
+    [backgroundLayer addSublayer:[self setupBorderLayer]];
+    [backgroundLayer addSublayer:[self setupGlossLayer]];
+
+    return backgroundLayer;
+}
+
+- (id)initWithFrame:(NSRect)frame 
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        clockTimer = [[ClockTimer alloc] init];
+
+        [self setLayer:[self setupLayers]];
+    }
+    return self;
 }
 
 - (void)awakeFromNib
 {
-    [self setupLayers];
-
     [self setWantsLayer:YES];
 }
 
