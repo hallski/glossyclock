@@ -18,8 +18,6 @@
 OSStatus
 MyHotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userData)
 {
-    // Do something once the key is pressed
-    NSLog(@"Hot key pressed");
     GlossyClockAppDelegate *delegate = (GlossyClockAppDelegate *)[[NSApplication sharedApplication] delegate];
     
     [[delegate window] toggleVisibility];
@@ -32,8 +30,6 @@ MyHotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userDa
     EventHotKeyRef hotKeyRef;
     EventHotKeyID hotKeyID;
     EventTypeSpec eventType;
-    
-    NSLog(@"Registering hot key");
     
     eventType.eventClass = kEventClassKeyboard;
     eventType.eventKind = kEventHotKeyPressed;
