@@ -12,4 +12,6 @@
 @interface ClockWindow : NSWindow {
 }
 
+- (void)toggleVisibility;
+
 @end

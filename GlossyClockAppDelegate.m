@@ -6,8 +6,10 @@
 //  Copyright 2009 Mikael Hallendal. All rights reserved.
 //
 
-#import "GlossyClockAppDelegate.h"
 #import <Carbon/Carbon.h>
+
+#import "GlossyClockAppDelegate.h"
+#import "ClockWindow.h"
 
 @implementation GlossyClockAppDelegate
 
@@ -18,6 +20,10 @@ MyHotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userDa
 {
     // Do something once the key is pressed
     NSLog(@"Hot key pressed");
+    GlossyClockAppDelegate *delegate = (GlossyClockAppDelegate *)[[NSApplication sharedApplication] delegate];
+    
+    [[delegate window] toggleVisibility];
+    
     return noErr;
 }
 

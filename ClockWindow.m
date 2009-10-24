@@ -26,6 +26,7 @@
         [self setMovableByWindowBackground:YES];
         [self setLevel:NSPopUpMenuWindowLevel];
         [self setStyleMask:NSBorderlessWindowMask];
+        [self setIsVisible:YES];
     }
     
     return self;
@@ -33,7 +34,13 @@
 
 - (void)setIsVisible:(BOOL)flag
 {
-    [[self animator] setAlphaValue:flag ? 0.0f : 1.0f];
+    [[self animator] setAlphaValue:flag ? 1.0f : 0.0f];
+    [super setIsVisible:flag];
+}
+
+- (void)toggleVisibility
+{
+    [self setIsVisible:![self isVisible]];
 }
 
 @end

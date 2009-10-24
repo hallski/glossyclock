@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ClockWindow;
+
 @interface GlossyClockAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    ClockWindow *window;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet ClockWindow *window;
 
 @end
