@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* GlossyClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* GlossyClockAppDelegate.m */; };
+		40CA44811093AE4600AB4A9A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA44801093AE4600AB4A9A /* Carbon.framework */; };
 		40E41C801080AD40000CC6BB /* ClockWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E41C7F1080AD40000CC6BB /* ClockWindow.m */; };
 		40F3849B107FEA8700D722C4 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F3849A107FEA8700D722C4 /* ClockView.m */; };
 		40F384A2107FEBC800D722C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F384A1107FEBC800D722C4 /* QuartzCore.framework */; };
 		40F38559107FEEC700D722C4 /* ClockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F38558107FEEC700D722C4 /* ClockTimer.m */; };
-		40F38655107FF74700D722C4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F38654107FF74700D722C4 /* Quartz.framework */; };
 		40F386CE10809A8200D722C4 /* clock-gloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 40F386CD10809A8200D722C4 /* clock-gloss.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -31,6 +31,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		40CA44801093AE4600AB4A9A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		40E41C7E1080AD40000CC6BB /* ClockWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWindow.h; sourceTree = "<group>"; };
 		40E41C7F1080AD40000CC6BB /* ClockWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWindow.m; sourceTree = "<group>"; };
 		40F38499107FEA8700D722C4 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		40F384A1107FEBC800D722C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		40F38557107FEEC700D722C4 /* ClockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTimer.h; sourceTree = "<group>"; };
 		40F38558107FEEC700D722C4 /* ClockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTimer.m; sourceTree = "<group>"; };
-		40F38654107FF74700D722C4 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		40F386CD10809A8200D722C4 /* clock-gloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-gloss.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GlossyClock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GlossyClock-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GlossyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlossyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +51,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				40F384A2107FEBC800D722C4 /* QuartzCore.framework in Frameworks */,
-				40F38655107FF74700D722C4 /* Quartz.framework in Frameworks */,
+				40CA44811093AE4600AB4A9A /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +78,7 @@
 			children = (
 				40F384A1107FEBC800D722C4 /* QuartzCore.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				40CA44801093AE4600AB4A9A /* Carbon.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -108,7 +109,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				40F38654107FF74700D722C4 /* Quartz.framework */,
 			);
 			name = FancyClock;
 			sourceTree = "<group>";
