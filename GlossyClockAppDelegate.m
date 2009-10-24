@@ -16,7 +16,9 @@
 @synthesize window;
 
 OSStatus
-MyHotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userData)
+HotKeyHandler(EventHandlerCallRef nextHandler,
+              EventRef theEvent, 
+              void *userData)
 {
     GlossyClockAppDelegate *delegate = (GlossyClockAppDelegate *)[[NSApplication sharedApplication] delegate];
     
@@ -37,7 +39,7 @@ MyHotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userDa
     hotKeyID.signature = 'htk1';
     hotKeyID.id = 1;
 
-    InstallApplicationEventHandler(&MyHotKeyHandler, 1, 
+    InstallApplicationEventHandler(&HotKeyHandler, 1, 
                                    &eventType, NULL, NULL);
     
     RegisterEventHotKey(49, cmdKey+controlKey, hotKeyID, 
