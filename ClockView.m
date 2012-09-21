@@ -20,7 +20,9 @@
     CGColorRef gradientColor1 = CGColorCreateGenericRGB(13.0f / 255.0, 116.0f / 255.0, 1.0, 1.0f);
     CGColorRef gradientColor2 = CGColorCreateGenericRGB(0.0f, 53.0f/255.0f, 126.0f/255.0f, 1.0f);
     
-    NSArray *colors = [NSArray arrayWithObjects:(id)gradientColor1, (id)gradientColor2, nil];
+    NSArray *colors = [NSArray arrayWithObjects:
+                       (__bridge id)gradientColor1,
+                       (__bridge id)gradientColor2, nil];
     
     CFRelease(gradientColor1);
     CFRelease(gradientColor2);
@@ -73,10 +75,10 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"clock-gloss" ofType:@"png"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     
-    CGImageSourceRef glossySource = CGImageSourceCreateWithURL((CFURLRef)fileURL, NULL);
+    CGImageSourceRef glossySource = CGImageSourceCreateWithURL((__bridge CFURLRef)fileURL, NULL);
     CGImageRef glossyImage = CGImageSourceCreateImageAtIndex(glossySource, 0, NULL);
     CFRelease(glossySource);
-    [glossLayer setContents:(id)glossyImage];
+    [glossLayer setContents:(__bridge id)glossyImage];
     CFRelease(glossyImage);
     
     [glossLayer setOpacity:0.8f];

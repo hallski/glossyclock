@@ -11,9 +11,9 @@
 @class ClockWindow;
 
 @interface GlossyClockAppDelegate : NSObject <NSApplicationDelegate> {
-    ClockWindow *window;
+    ClockWindow *__strong window;
 }
 
-@property (assign) IBOutlet ClockWindow *window;
+@property (strong) IBOutlet ClockWindow *window;
 
 @end
