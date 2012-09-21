@@ -39,9 +39,9 @@ HotKeyHandler(EventHandlerCallRef nextHandler,
     hotKeyID.signature = 'htk1';
     hotKeyID.id = 1;
 
-    InstallApplicationEventHandler(&HotKeyHandler, 1, 
-                                   &eventType, NULL, NULL);
+    InstallApplicationEventHandler(&HotKeyHandler, 1, &eventType, NULL, NULL);
     
+    // Cmd+Ctrl+Space to toggle visibility.
     RegisterEventHotKey(49, cmdKey+controlKey, hotKeyID, 
                         GetApplicationEventTarget(), 0, &hotKeyRef);
 }

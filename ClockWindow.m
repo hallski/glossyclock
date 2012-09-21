@@ -34,7 +34,8 @@
 
 - (void)setIsVisible:(BOOL)flag
 {
-    [[self animator] setAlphaValue:flag ? 1.0f : 0.0f];
+    [[self animator] setAlphaValue:flag ? 1.0 : 0.0];
+    
     [super setIsVisible:flag];
 }
 

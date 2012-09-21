@@ -17,17 +17,16 @@
 {
     backgroundLayer = [CAGradientLayer layer];
     
-    CGColorRef gradientColor1 = CGColorCreateGenericRGB(13.0f / 255.0, 116.0f / 255.0, 1.0, 1.0f);
-    CGColorRef gradientColor2 = CGColorCreateGenericRGB(0.0f, 53.0f/255.0f, 126.0f/255.0f, 1.0f);
+    CGColorRef gradientColor1 = CGColorCreateGenericRGB(13.0 / 255.0, 116.0 / 255.0, 1.0, 1.0);
+    CGColorRef gradientColor2 = CGColorCreateGenericRGB(0.0, 53.0 / 255.0, 126.0 / 255.0, 1.0);
     
-    NSArray *colors = @[(__bridge id)gradientColor1,
-                       (__bridge id)gradientColor2];
+    NSArray *colors = @[(__bridge id)gradientColor1, (__bridge id)gradientColor2];
     
     CFRelease(gradientColor1);
     CFRelease(gradientColor2);
     
     [(CAGradientLayer *)backgroundLayer setColors:colors];
-    [backgroundLayer setCornerRadius:12.0f];
+    [backgroundLayer setCornerRadius:12.0];
     
     CAConstraintLayoutManager *layout = [CAConstraintLayoutManager layoutManager];
     [backgroundLayer setLayoutManager:layout];
@@ -35,12 +34,13 @@
     return backgroundLayer;
 }
 
-- (CALayer *)setupClockFaceLayer {
+- (CALayer *)setupClockFaceLayer
+{
     CATextLayer *clockFaceLayer = [CATextLayer layer];
     [clockFaceLayer bind:@"string" toObject:clockTimer withKeyPath:@"outputString" options:nil];
     [clockFaceLayer setFont:@"Menlo"];
-    [clockFaceLayer setFontSize:60.0f];
-    [clockFaceLayer setShadowOpacity:.9f];
+    [clockFaceLayer setFontSize:60.0];
+    [clockFaceLayer setShadowOpacity:0.9];
     
     // Constrain the text layer in the middle
     CAConstraint *constraint = [CAConstraint constraintWithAttribute:kCAConstraintMidX
@@ -59,10 +59,11 @@
 - (CALayer *)setupBorderLayer
 {
     CALayer *borderLayer = [CALayer layer];
-    CGRect borderRect = CGRectInset([self frame], 8.0f, 8.0f);
-    [borderLayer setCornerRadius:12.0f];
+    CGRect borderRect = CGRectInset([self frame], 8.0, 8.0);
+    
+    [borderLayer setCornerRadius:12.0];
     [borderLayer setBorderColor:CGColorGetConstantColor(kCGColorWhite)];
-    [borderLayer setBorderWidth:2.0f];
+    [borderLayer setBorderWidth:2.0];
     [borderLayer setFrame:borderRect];
     
     return borderLayer;    
@@ -80,8 +81,8 @@
     [glossLayer setContents:(__bridge id)glossyImage];
     CFRelease(glossyImage);
     
-    [glossLayer setOpacity:0.8f];
-    [glossLayer setCornerRadius:12.0f];
+    [glossLayer setOpacity:0.8];
+    [glossLayer setCornerRadius:12.0];
     [glossLayer setMasksToBounds:YES];
     [glossLayer setFrame:[self frame]];
 
@@ -107,6 +108,7 @@
 
         [self setLayer:[self setupLayers]];
     }
+    
     return self;
 }
 

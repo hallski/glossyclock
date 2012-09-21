@@ -13,33 +13,34 @@
 
 @synthesize outputString;
 
-- (void) updateOutputString {
+- (void)updateOutputString
+{
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    
     [format setDateFormat:@"HH:mm:ss"];
     
     [self setOutputString:[format stringFromDate:[NSDate date]]];
-    
 }
 
-- (id) init
+- (id)init
 {
     self = [super init];
-    if (self != nil) {
+    if (self) {
         [self updateOutputString];
-        
-        [NSTimer scheduledTimerWithTimeInterval:1.0f 
-                                         target:self 
+
+        // Start timer to update outputString
+        [NSTimer scheduledTimerWithTimeInterval:1.0
+                                         target:self
                                        selector:@selector(timerFireMethod:)
                                        userInfo:nil repeats:YES];
-        // Start timer to update outputString
     }
+
     return self;
 }
 
 - (void)timerFireMethod:(NSTimer *)theTimer
 {
     [self updateOutputString];
-
 }
 
 @end
