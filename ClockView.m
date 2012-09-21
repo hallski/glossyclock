@@ -20,9 +20,8 @@
     CGColorRef gradientColor1 = CGColorCreateGenericRGB(13.0f / 255.0, 116.0f / 255.0, 1.0, 1.0f);
     CGColorRef gradientColor2 = CGColorCreateGenericRGB(0.0f, 53.0f/255.0f, 126.0f/255.0f, 1.0f);
     
-    NSArray *colors = [NSArray arrayWithObjects:
-                       (__bridge id)gradientColor1,
-                       (__bridge id)gradientColor2, nil];
+    NSArray *colors = @[(__bridge id)gradientColor1,
+                       (__bridge id)gradientColor2];
     
     CFRelease(gradientColor1);
     CFRelease(gradientColor2);
