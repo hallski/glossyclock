@@ -3,7 +3,7 @@
 //  GlossyClock
 //
 //  Created by Mikael Hallendal on 2009-10-10.
-//  Copyright 2009 Mikael Hallendal. All rights reserved.
+//  Copyright 2009-2012 Mikael Hallendal. All rights reserved.
 //
 
 #import <Carbon/Carbon.h>
@@ -11,9 +11,8 @@
 #import "GlossyClockAppDelegate.h"
 #import "ClockWindow.h"
 
-@implementation GlossyClockAppDelegate
 
-@synthesize window;
+@implementation GlossyClockAppDelegate
 
 OSStatus
 HotKeyHandler(EventHandlerCallRef nextHandler,
