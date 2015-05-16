@@ -25,11 +25,8 @@ class ClockView: NSView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        self.layer = setupLayers()
-    }
-
-    override func awakeFromNib() {
         self.wantsLayer = true
+        self.layer = setupLayers()
     }
 
     func setupLayers() -> CALayer {
@@ -75,13 +72,11 @@ class ClockView: NSView {
     func setupBorderLayer() -> CALayer {
         let border = CALayer()
 
-        let borderRect = CGRectInset(frame, 8.0, 8.0)
-
         border.cornerRadius = 12.0
         border.borderColor = NSColor.whiteColor().CGColor
         border.borderWidth = 2.0
 
-        border.frame = borderRect
+        border.frame = CGRectInset(frame, 8.0, 8.0)
 
         return border
     }
@@ -89,11 +84,10 @@ class ClockView: NSView {
     func setupGlossLayer() -> CALayer {
         let gloss = CALayer()
 
-        let image = NSImage(named: "Gloss")
-        let imageSource = CGImageSourceCreateWithData(image?.TIFFRepresentation, nil)
-        let glossyImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
+        if let image = NSImage(named: "Gloss") {
+            gloss.contents = image.CGImage
+        }
 
-        gloss.contents = glossyImage
         gloss.opacity = 0.8
         gloss.cornerRadius = 12.0
         gloss.masksToBounds = true
@@ -108,4 +102,11 @@ func constraint(attribute: CAConstraintAttribute,
     relativeTo: String,
     attribute2: CAConstraintAttribute) -> CAConstraint {
         return CAConstraint.constraintWithAttribute(attribute, relativeTo: "superlayer", attribute: attribute2) as! CAConstraint
+}
+
+extension NSImage {
+    var CGImage: CGImageRef {
+        let imageSource = CGImageSourceCreateWithData(self.TIFFRepresentation, nil)
+        return CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
+    }
 }
