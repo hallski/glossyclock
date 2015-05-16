@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct ClockTimer {
+class ClockTimer {
     let interval: NSTimeInterval
     var timer: dispatch_source_t?
 
@@ -13,7 +13,7 @@ struct ClockTimer {
         self.interval = interval
     }
 
-    mutating func start(callback: (NSDate) -> ()) {
+    func start(callback: (NSDate) -> ()) {
         if let t = timer {
             dispatch_source_cancel(t)
         }
@@ -27,7 +27,7 @@ struct ClockTimer {
         timer = t
     }
 
-    mutating func stop() {
+    func stop() {
         if let t = timer {
             dispatch_source_cancel(t)
         }
