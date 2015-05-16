@@ -7,225 +7,265 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* GlossyClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* GlossyClockAppDelegate.m */; };
-		40CA44811093AE4600AB4A9A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CA44801093AE4600AB4A9A /* Carbon.framework */; };
-		40E41C801080AD40000CC6BB /* ClockWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E41C7F1080AD40000CC6BB /* ClockWindow.m */; };
-		40F3849B107FEA8700D722C4 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F3849A107FEA8700D722C4 /* ClockView.m */; };
-		40F384A2107FEBC800D722C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F384A1107FEBC800D722C4 /* QuartzCore.framework */; };
-		40F38559107FEEC700D722C4 /* ClockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F38558107FEEC700D722C4 /* ClockTimer.m */; };
-		40F386CE10809A8200D722C4 /* clock-gloss.png in Resources */ = {isa = PBXBuildFile; fileRef = 40F386CD10809A8200D722C4 /* clock-gloss.png */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		40A14D901B0745A5006FCDB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A14D8F1B0745A5006FCDB7 /* AppDelegate.swift */; };
+		40A14D921B0745A5006FCDB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A14D911B0745A5006FCDB7 /* Images.xcassets */; };
+		40A14D951B0745A5006FCDB7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A14D931B0745A5006FCDB7 /* MainMenu.xib */; };
+		40A14DA11B0745A5006FCDB7 /* GlossyClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A14DA01B0745A5006FCDB7 /* GlossyClockTests.swift */; };
+		40A14DAB1B07473A006FCDB7 /* ClockWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A14DAA1B07473A006FCDB7 /* ClockWindow.swift */; };
+		40A14DAE1B0747E2006FCDB7 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A14DAD1B0747E2006FCDB7 /* ClockView.swift */; };
+		40A14DB01B074B00006FCDB7 /* ClockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A14DAF1B074B00006FCDB7 /* ClockTimer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		40A14D9B1B0745A5006FCDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40A14D821B0745A5006FCDB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A14D891B0745A5006FCDB7;
+			remoteInfo = GlossyClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40A14DBA1B075816006FCDB7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* GlossyClockAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlossyClockAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* GlossyClockAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlossyClockAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* GlossyClock_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlossyClock_Prefix.pch; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		40CA44801093AE4600AB4A9A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		40E41C7E1080AD40000CC6BB /* ClockWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWindow.h; sourceTree = "<group>"; };
-		40E41C7F1080AD40000CC6BB /* ClockWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWindow.m; sourceTree = "<group>"; };
-		40F38499107FEA8700D722C4 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
-		40F3849A107FEA8700D722C4 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
-		40F384A1107FEBC800D722C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		40F38557107FEEC700D722C4 /* ClockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTimer.h; sourceTree = "<group>"; };
-		40F38558107FEEC700D722C4 /* ClockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTimer.m; sourceTree = "<group>"; };
-		40F386CD10809A8200D722C4 /* clock-gloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-gloss.png"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* GlossyClock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GlossyClock-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* GlossyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlossyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A14D8A1B0745A5006FCDB7 /* GlossyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlossyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A14D8E1B0745A5006FCDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A14D8F1B0745A5006FCDB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40A14D911B0745A5006FCDB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		40A14D941B0745A5006FCDB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		40A14D9A1B0745A5006FCDB7 /* GlossyClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlossyClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A14D9F1B0745A5006FCDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A14DA01B0745A5006FCDB7 /* GlossyClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossyClockTests.swift; sourceTree = "<group>"; };
+		40A14DAA1B07473A006FCDB7 /* ClockWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockWindow.swift; sourceTree = "<group>"; };
+		40A14DAD1B0747E2006FCDB7 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		40A14DAF1B074B00006FCDB7 /* ClockTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D11072E0486CEB800E47090 /* Frameworks */ = {
+		40A14D871B0745A5006FCDB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				40F384A2107FEBC800D722C4 /* QuartzCore.framework in Frameworks */,
-				40CA44811093AE4600AB4A9A /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A14D971B0745A5006FCDB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		40A14D811B0745A5006FCDB7 = {
 			isa = PBXGroup;
 			children = (
-				256AC3D80F4B6AC300CF3369 /* GlossyClockAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* GlossyClockAppDelegate.m */,
-				40F38499107FEA8700D722C4 /* ClockView.h */,
-				40F3849A107FEA8700D722C4 /* ClockView.m */,
-				40F38557107FEEC700D722C4 /* ClockTimer.h */,
-				40F38558107FEEC700D722C4 /* ClockTimer.m */,
-				40E41C7E1080AD40000CC6BB /* ClockWindow.h */,
-				40E41C7F1080AD40000CC6BB /* ClockWindow.m */,
+				40A14D8C1B0745A5006FCDB7 /* GlossyClock */,
+				40A14D9D1B0745A5006FCDB7 /* GlossyClockTests */,
+				40A14D8B1B0745A5006FCDB7 /* Products */,
 			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+		40A14D8B1B0745A5006FCDB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40F384A1107FEBC800D722C4 /* QuartzCore.framework */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				40CA44801093AE4600AB4A9A /* Carbon.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D1107320486CEB800E47090 /* GlossyClock.app */,
+				40A14D8A1B0745A5006FCDB7 /* GlossyClock.app */,
+				40A14D9A1B0745A5006FCDB7 /* GlossyClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* FancyClock */ = {
+		40A14D8C1B0745A5006FCDB7 /* GlossyClock */ = {
 			isa = PBXGroup;
 			children = (
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
+				40A14D8F1B0745A5006FCDB7 /* AppDelegate.swift */,
+				40A14DAF1B074B00006FCDB7 /* ClockTimer.swift */,
+				40A14DAD1B0747E2006FCDB7 /* ClockView.swift */,
+				40A14DAA1B07473A006FCDB7 /* ClockWindow.swift */,
+				40A14D8D1B0745A5006FCDB7 /* Supporting Files */,
+				40A14DAC1B07475D006FCDB7 /* Resources */,
 			);
-			name = FancyClock;
+			path = GlossyClock;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+		40A14D8D1B0745A5006FCDB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3F00F4B6AF500CF3369 /* GlossyClock_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
+				40A14D8E1B0745A5006FCDB7 /* Info.plist */,
 			);
-			name = "Other Sources";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
+		40A14D9D1B0745A5006FCDB7 /* GlossyClockTests */ = {
 			isa = PBXGroup;
 			children = (
-				40F386CD10809A8200D722C4 /* clock-gloss.png */,
-				8D1107310486CEB800E47090 /* GlossyClock-Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				40A14DA01B0745A5006FCDB7 /* GlossyClockTests.swift */,
+				40A14D9E1B0745A5006FCDB7 /* Supporting Files */,
+			);
+			path = GlossyClockTests;
+			sourceTree = "<group>";
+		};
+		40A14D9E1B0745A5006FCDB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40A14D9F1B0745A5006FCDB7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40A14DAC1B07475D006FCDB7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40A14D911B0745A5006FCDB7 /* Images.xcassets */,
+				40A14D931B0745A5006FCDB7 /* MainMenu.xib */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* GlossyClock */ = {
+		40A14D891B0745A5006FCDB7 /* GlossyClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GlossyClock" */;
+			buildConfigurationList = 40A14DA41B0745A5006FCDB7 /* Build configuration list for PBXNativeTarget "GlossyClock" */;
 			buildPhases = (
-				8D1107290486CEB800E47090 /* Resources */,
-				8D11072C0486CEB800E47090 /* Sources */,
-				8D11072E0486CEB800E47090 /* Frameworks */,
+				40A14D861B0745A5006FCDB7 /* Sources */,
+				40A14D871B0745A5006FCDB7 /* Frameworks */,
+				40A14D881B0745A5006FCDB7 /* Resources */,
+				40A14DBA1B075816006FCDB7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GlossyClock;
-			productInstallPath = "$(HOME)/Applications";
-			productName = FancyClock;
-			productReference = 8D1107320486CEB800E47090 /* GlossyClock.app */;
+			productName = GlossyClock;
+			productReference = 40A14D8A1B0745A5006FCDB7 /* GlossyClock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		40A14D991B0745A5006FCDB7 /* GlossyClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A14DA71B0745A5006FCDB7 /* Build configuration list for PBXNativeTarget "GlossyClockTests" */;
+			buildPhases = (
+				40A14D961B0745A5006FCDB7 /* Sources */,
+				40A14D971B0745A5006FCDB7 /* Frameworks */,
+				40A14D981B0745A5006FCDB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40A14D9C1B0745A5006FCDB7 /* PBXTargetDependency */,
+			);
+			name = GlossyClockTests;
+			productName = GlossyClockTests;
+			productReference = 40A14D9A1B0745A5006FCDB7 /* GlossyClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		40A14D821B0745A5006FCDB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mikael Hallendal";
+				TargetAttributes = {
+					40A14D891B0745A5006FCDB7 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					40A14D991B0745A5006FCDB7 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 40A14D891B0745A5006FCDB7;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GlossyClock" */;
+			buildConfigurationList = 40A14D851B0745A5006FCDB7 /* Build configuration list for PBXProject "GlossyClock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* FancyClock */;
+			mainGroup = 40A14D811B0745A5006FCDB7;
+			productRefGroup = 40A14D8B1B0745A5006FCDB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* GlossyClock */,
+				40A14D891B0745A5006FCDB7 /* GlossyClock */,
+				40A14D991B0745A5006FCDB7 /* GlossyClockTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8D1107290486CEB800E47090 /* Resources */ = {
+		40A14D881B0745A5006FCDB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				40F386CE10809A8200D722C4 /* clock-gloss.png in Resources */,
+				40A14D921B0745A5006FCDB7 /* Images.xcassets in Resources */,
+				40A14D951B0745A5006FCDB7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A14D981B0745A5006FCDB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8D11072C0486CEB800E47090 /* Sources */ = {
+		40A14D861B0745A5006FCDB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* GlossyClockAppDelegate.m in Sources */,
-				40F3849B107FEA8700D722C4 /* ClockView.m in Sources */,
-				40F38559107FEEC700D722C4 /* ClockTimer.m in Sources */,
-				40E41C801080AD40000CC6BB /* ClockWindow.m in Sources */,
+				40A14DB01B074B00006FCDB7 /* ClockTimer.swift in Sources */,
+				40A14DAB1B07473A006FCDB7 /* ClockWindow.swift in Sources */,
+				40A14DAE1B0747E2006FCDB7 /* ClockView.swift in Sources */,
+				40A14D901B0745A5006FCDB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40A14D961B0745A5006FCDB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A14DA11B0745A5006FCDB7 /* GlossyClockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		40A14D9C1B0745A5006FCDB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40A14D891B0745A5006FCDB7 /* GlossyClock */;
+			targetProxy = 40A14D9B1B0745A5006FCDB7 /* PBXContainerItemProxy */;
 		};
-		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40A14D931B0745A5006FCDB7 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
+				40A14D941B0745A5006FCDB7 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -233,100 +273,177 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C01FCF4B08A954540054247B /* Debug */ = {
+		40A14DA21B0745A5006FCDB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = GlossyClock_Prefix.pch;
-				INFOPLIST_FILE = "GlossyClock-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = GlossyClock;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		C01FCF4C08A954540054247B /* Release */ = {
+		40A14DA31B0745A5006FCDB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = GlossyClock_Prefix.pch;
-				INFOPLIST_FILE = "GlossyClock-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = GlossyClock;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		40A14DA51B0745A5006FCDB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = macosx;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GlossyClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		40A14DA61B0745A5006FCDB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = macosx;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GlossyClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		40A14DA81B0745A5006FCDB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GlossyClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlossyClock.app/Contents/MacOS/GlossyClock";
+			};
+			name = Debug;
+		};
+		40A14DA91B0745A5006FCDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GlossyClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlossyClock.app/Contents/MacOS/GlossyClock";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GlossyClock" */ = {
+		40A14D851B0745A5006FCDB7 /* Build configuration list for PBXProject "GlossyClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4B08A954540054247B /* Debug */,
-				C01FCF4C08A954540054247B /* Release */,
+				40A14DA21B0745A5006FCDB7 /* Debug */,
+				40A14DA31B0745A5006FCDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GlossyClock" */ = {
+		40A14DA41B0745A5006FCDB7 /* Build configuration list for PBXNativeTarget "GlossyClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
+				40A14DA51B0745A5006FCDB7 /* Debug */,
+				40A14DA61B0745A5006FCDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A14DA71B0745A5006FCDB7 /* Build configuration list for PBXNativeTarget "GlossyClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A14DA81B0745A5006FCDB7 /* Debug */,
+				40A14DA91B0745A5006FCDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = 40A14D821B0745A5006FCDB7 /* Project object */;
 }
