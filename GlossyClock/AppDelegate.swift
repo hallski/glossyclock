@@ -15,16 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var clockTimer = ClockTimer(interval: 1.0)
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
         clockTimer.start { date in
             self.clockView.time = date
         }
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
